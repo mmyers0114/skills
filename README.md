@@ -30,7 +30,7 @@ If you want to keep up with changes to these skills, and any new ones I create, 
 npx skills@latest add mattpocock/skills
 ```
 
-2. Pick the skills you want, and which coding agents you want to install them on. **Make sure you select `/setup-matt-pocock-skills`**.
+2. Pick the skills you want, and which coding agents you want to install them on. **Make sure you select `/setup-matt-pocock-skills`**. **Opencode users**: clone this repo and run `./scripts/link-skills-opencode.sh` — the skills.sh picker doesn't support opencode yet.
 
 3. Run `/setup-matt-pocock-skills` in your agent. It will:
    - Ask you which issue tracker you want to use (GitHub, Linear, or local files)
