@@ -1,5 +1,22 @@
 # mattpocock-skills
 
+## 1.2.0
+
+### Minor Changes
+
+- [#488](https://github.com/mattpocock/skills/pull/488) [`cdec9f6`](https://github.com/mattpocock/skills/commit/cdec9f6eb24dbfe606e3ad9b3eb457ba09210b85) Thanks [@mattpocock](https://github.com/mattpocock)! - Reword how the **`prototype`** skill handles its artifacts around a single idea: **the prototype is a primary source**. Rather than being deleted once it's answered its question, the prototype is captured as runnable evidence on a throwaway branch (`prototype/<name>`) out of main, with a context pointer to it left on the implementation issue — so the main branch keeps only the validated decision while the exploration stays findable. The answer (verdict + question) is still captured durably in an issue/ADR/commit.
+
+### Patch Changes
+
+- [#502](https://github.com/mattpocock/skills/pull/502) [`44eed54`](https://github.com/mattpocock/skills/commit/44eed545186ffd0263e8004867750b80cfddd215) Thanks [@mattpocock](https://github.com/mattpocock)! - Make `/setup-matt-pocock-skills` friendlier and align the local-markdown tracker with the current spec.
+
+  - **Triage labels** are now asked about only when the `triage` skill is installed, and then as a single recommended-yes question ("keep the default triage labels?") instead of an override interrogation. When `triage` isn't installed, the section — and `docs/agents/triage-labels.md` — are skipped.
+  - **External PRs as a request surface** is no longer a setup question. The GitHub/GitLab templates still carry the flag, defaulted off; a user can flip it in `docs/agents/issue-tracker.md` later.
+  - **Domain docs** default to single-context without asking; multi-context is only offered when the repo shows monorepo signals.
+  - **Local-markdown tickets** are now one file per ticket under `.scratch/<feature>/issues/<NN>-<slug>.md` — never a single combined `tickets.md`. `/to-tickets` and the local issue-tracker template now agree, and the spec file is `spec.md` (not `PRD.md`) to match `/to-spec`.
+
+  Docs pages for `setup-matt-pocock-skills` and `to-tickets` re-synced.
+
 ## 1.1.0
 
 ### Minor Changes
